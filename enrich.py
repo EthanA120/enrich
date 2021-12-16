@@ -3,9 +3,13 @@ it.\n The color names and values is inspired by https://www.w3schools.com/colors
 https://github.com/jonathantneal
 
 Functions:
-enrich - Return decorated colored text for rgb values or for hex
-dye - Return decorated colored text by the name of the color
-printc - Prints the decorated colorized text that have sent as argument
+expand - Expands the colors list, extra colors will be available if this function will be executed.
+enrich - Return colored and decorated font for rgb values or for hex.
+dye - Only determine the foreground color of the font but can accept a dictionary of strings with their different colors values.
+printr - Prints the decorated colorized text that have sent as argument.
+printd - Prints text that have sent as an argument in multiple colors.
+
+Examples in main
 """
 
 from __future__ import print_function
@@ -434,7 +438,7 @@ def _check_value(value=None, kind=None):
 
 def enrich(text, fore=None, back=None, decor=None):
     """
-    Return colored text for rgb values or for hex.\n
+    Return colored and decorated font for rgb values or for hex.\n
     :param text: Text to be colorized
     :param fore: Hexagonal or RGB foreground color value (#RRGGBB) or (R, G, B)
     :param back: Hexagonal or RGB background color value (#RRGGBB) or (R, G, B)
@@ -474,7 +478,7 @@ def printr(text, fore=None, back=None, decor=None, *args, **kwargs):
 
 def dye(text_color):
     """
-    Only determine the foreground of text argument
+    Only determine the foreground color of the font but can accept a dictionary of strings with their different colors values.\n
     :param text_color: dictionary of every text and it's color
     ":type text_n_color: dict
     :return: Colored text
@@ -490,7 +494,7 @@ def dye(text_color):
 
 def printd(*text_and_color: str):
     """
-        Prints text that have sent as an argument in multiple colors\n
+        Prints text that have sent as an argument in multiple colors.\n
         :param text_and_color: Contains multiple strings with both text and foreground color separated with the char ":"
         :type text_and_color: tuple of str
     """
