@@ -1,3 +1,10 @@
+Metadata-Version: 2.1
+Name: colorich
+Version: 0.6.4
+Author: Ethan Amar
+Author-email: EthanA120@Gmail.com
+Description-Content-Type: text/markdown
+
 # colorich
 Python module - Use ANSI formatting to color output text by hexadecimal values, RGB values or by color specific name or decorate it
 
